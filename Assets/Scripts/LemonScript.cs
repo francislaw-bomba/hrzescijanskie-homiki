@@ -14,10 +14,6 @@ public class LemonScript : MonoBehaviour
     [SerializeField] private GameObject WaterButton;
     [SerializeField] private CavansScript CavansScript;
 
-    private void Awake()
-    {
-        
-    }
     void Start()
     {
         TimeRemaning = GrowthTime;

@@ -7,7 +7,7 @@ public class CavansScript : MonoBehaviour
 
     [SerializeField] public GameObject WaterButton;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         WaterButton = transform.Find("WaterPlantButton").gameObject;
     }
