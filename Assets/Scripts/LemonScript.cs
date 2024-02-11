@@ -12,6 +12,7 @@ public class LemonScript : MonoBehaviour
     [SerializeField] private SpriteRenderer LemonSprite;
     [SerializeField] WaterLevelScript WaterLevelScript;
     [SerializeField] private GameObject WaterButton;
+    [SerializeField] private GameObject WaterLevelSlider;
     [SerializeField] private CavansScript CavansScript;
 
     void Start()
@@ -20,6 +21,7 @@ public class LemonScript : MonoBehaviour
         WaterLevelScript = GameObject.FindGameObjectWithTag("WaterLevel").GetComponent<WaterLevelScript>();
         CavansScript = GetComponentInChildren<CavansScript>();
         WaterButton = CavansScript.WaterButton;
+        WaterLevelSlider = CavansScript.WaterLevel;
     }
 
     void Update()
@@ -50,6 +52,8 @@ public class LemonScript : MonoBehaviour
         if (TimeRemaning <= 0)
         {
             LemonSprite.sprite = Stage5;
+            Destroy(WaterButton);
+            Destroy(WaterLevelSlider);
         }
     }
 
