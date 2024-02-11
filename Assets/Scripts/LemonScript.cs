@@ -6,20 +6,39 @@ public class LemonScript : MonoBehaviour
 {
     [SerializeField] private Sprite Stage2, Stage3, Stage4, Stage5;
     [SerializeField] private float GrowthTime = 20f;
+    [SerializeField] public float WaterLevel = 7f;
+    [SerializeField] public float MaxWaterLevel = 7f;
     [SerializeField] private float TimeRemaning;
     [SerializeField] private SpriteRenderer LemonSprite;
+    [SerializeField] WaterLevelScript WaterLevelScript;
+    [SerializeField] private GameObject WaterButton;
+    [SerializeField] private CavansScript CavansScript;
+
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
         TimeRemaning = GrowthTime;
+        WaterLevelScript = GameObject.FindGameObjectWithTag("WaterLevel").GetComponent<WaterLevelScript>();
+        CavansScript = GetComponentInChildren<CavansScript>();
+        WaterButton = CavansScript.WaterButton;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (TimeRemaning > 0)
+        if (TimeRemaning > 0 && WaterLevel > 0)
         {
             TimeRemaning -= Time.deltaTime;
+            WaterLevel -= Time.deltaTime;
+            WaterLevelScript.UpdateWaterBar(WaterLevel, MaxWaterLevel);
         }
+        if (WaterLevel < 1.5)
+        {
+            WaterButton.SetActive(true);
+        }
+
         if (TimeRemaning < 15 && TimeRemaning > 10)
         {
             LemonSprite.sprite = Stage2;
@@ -36,5 +55,10 @@ public class LemonScript : MonoBehaviour
         {
             LemonSprite.sprite = Stage5;
         }
+    }
+
+    public void WaterPlant()
+    {
+        WaterLevel = MaxWaterLevel;
     }
 }
