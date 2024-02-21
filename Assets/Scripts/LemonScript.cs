@@ -13,6 +13,7 @@ public class LemonScript : MonoBehaviour
     [SerializeField] WaterLevelScript WaterLevelScript;
     [SerializeField] private GameObject WaterButton;
     [SerializeField] private GameObject WaterLevelSlider;
+    [SerializeField] private GameObject HarvestButton;
     [SerializeField] private CavansScript CavansScript;
 
     void Start()
@@ -22,6 +23,7 @@ public class LemonScript : MonoBehaviour
         CavansScript = GetComponentInChildren<CavansScript>();
         WaterButton = CavansScript.WaterButton;
         WaterLevelSlider = CavansScript.WaterLevel;
+        HarvestButton = CavansScript.HarvestButton;
     }
 
     void Update()
@@ -45,20 +47,25 @@ public class LemonScript : MonoBehaviour
         {
             LemonSprite.sprite = Stage3;
         }
-        else if(TimeRemaning < 5 && TimeRemaning > 0)
+        else if (TimeRemaning < 5 && TimeRemaning > 0)
         {
             LemonSprite.sprite = Stage4;
         }
-        else if(TimeRemaning <= 0)
+        else if (TimeRemaning <= 0)
         {
             LemonSprite.sprite = Stage5;
             Destroy(WaterButton);
             Destroy(WaterLevelSlider);
+            HarvestButton.SetActive(true);
         }
     }
 
     public void WaterPlant()
     {
         WaterLevel = MaxWaterLevel;
+    }
+    public void Harvested()
+    {
+        Destroy(gameObject);
     }
 }
