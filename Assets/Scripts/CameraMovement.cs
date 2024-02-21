@@ -13,12 +13,12 @@ public class CameraMovement : MonoBehaviour
     }
     public void GoToRoomTwo()
     {
-        Cam.transform.position = new Vector3(0, 10, -10);
+        Cam.transform.position = new Vector3(0, 12, -10);
         RoomPlayerIsIn = 2;
     }
     public void GoToRoomThree()
     {
-        Cam.transform.position = new Vector3(21.3f, 0, -10);
+        Cam.transform.position = new Vector3(23.5f, 0, -10);
         RoomPlayerIsIn = 3;
     }
 }

@@ -41,15 +41,15 @@ public class LemonScript : MonoBehaviour
         {
             LemonSprite.sprite = Stage2;
         }
-        if (TimeRemaning < 10 && TimeRemaning > 5)
+        else if (TimeRemaning < 10 && TimeRemaning > 5)
         {
             LemonSprite.sprite = Stage3;
         }
-        if (TimeRemaning < 5 && TimeRemaning > 0)
+        else if(TimeRemaning < 5 && TimeRemaning > 0)
         {
             LemonSprite.sprite = Stage4;
         }
-        if (TimeRemaning <= 0)
+        else if(TimeRemaning <= 0)
         {
             LemonSprite.sprite = Stage5;
             Destroy(WaterButton);
