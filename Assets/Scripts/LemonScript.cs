@@ -15,11 +15,13 @@ public class LemonScript : MonoBehaviour
     [SerializeField] private GameObject WaterLevelSlider;
     [SerializeField] private GameObject HarvestButton;
     [SerializeField] private CavansScript CavansScript;
+    [SerializeField] public PlayerValues PlayerVal;
 
     void Start()
     {
+        PlayerVal = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayerValues>();
         TimeRemaning = GrowthTime;
-        WaterLevelScript = GameObject.FindGameObjectWithTag("WaterLevel").GetComponent<WaterLevelScript>();
+        WaterLevelScript = GetComponentInChildren<WaterLevelScript>();
         CavansScript = GetComponentInChildren<CavansScript>();
         WaterButton = CavansScript.WaterButton;
         WaterLevelSlider = CavansScript.WaterLevel;
@@ -66,6 +68,7 @@ public class LemonScript : MonoBehaviour
     }
     public void Harvested()
     {
+        PlayerVal.HarvestLemons();
         Destroy(gameObject);
     }
 }
