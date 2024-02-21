@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerValues : MonoBehaviour
 {
     [SerializeField] public int LemonCount;
+    [SerializeField] public int LemonSeedCount = 99;
     void Start()
     {
         

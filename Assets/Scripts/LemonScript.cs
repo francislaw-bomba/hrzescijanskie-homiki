@@ -16,6 +16,7 @@ public class LemonScript : MonoBehaviour
     [SerializeField] private GameObject HarvestButton;
     [SerializeField] private CavansScript CavansScript;
     [SerializeField] public PlayerValues PlayerVal;
+    [SerializeField] private PotScript ScriptPot;
 
     void Start()
     {
@@ -68,7 +69,9 @@ public class LemonScript : MonoBehaviour
     }
     public void Harvested()
     {
+        ScriptPot = GetComponentInParent<PotScript>();
         PlayerVal.HarvestLemons();
         Destroy(gameObject);
+        ScriptPot.IsOccupied = false;
     }
 }
