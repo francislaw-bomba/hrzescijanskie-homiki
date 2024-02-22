@@ -6,6 +6,7 @@ public class PotScript : MonoBehaviour
 {
     [SerializeField] public bool IsOccupied = false;
     [SerializeField] private GameObject LemonTreePrefab;
+    [SerializeField] private GameObject MangoTreePrefab;
     [SerializeField] private PlayerValues PlayerVal;
     [SerializeField] private GameObject Canvas;
 
@@ -35,6 +36,17 @@ public class PotScript : MonoBehaviour
             PlayerVal.LemonSeedCount--;
             Canvas.SetActive(false);
             var c = Instantiate(LemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            c.transform.SetParent(gameObject.transform);
+        }
+    }
+    public void PlantMango()
+    {
+        if (PlayerVal.MangoSeedCount > 0)
+        {
+            IsOccupied = true;
+            PlayerVal.MangoSeedCount--;
+            Canvas.SetActive(false);
+            var c = Instantiate(MangoTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
         }
     }

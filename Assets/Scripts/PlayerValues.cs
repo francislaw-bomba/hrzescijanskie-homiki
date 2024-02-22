@@ -6,6 +6,9 @@ public class PlayerValues : MonoBehaviour
 {
     [SerializeField] public int LemonCount;
     [SerializeField] public int LemonSeedCount = 99;
+
+    [SerializeField] public int MangoCount;
+    [SerializeField] public int MangoSeedCount = 99;
     void Start()
     {
         
@@ -19,5 +22,10 @@ public class PlayerValues : MonoBehaviour
     public void HarvestLemons()
     {
         LemonCount += 5;
+    }
+
+    public void HarvestMangos()
+    {
+        MangoCount += 5;
     }
 }
