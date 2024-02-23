@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PotScript : MonoBehaviour
 {
-    [SerializeField] public bool IsOccupied = false;
     [SerializeField] private GameObject LemonTreePrefab;
     [SerializeField] private GameObject MangoTreePrefab;
+    [SerializeField] private GameObject PurpleLemonTreePrefab;
+
     [SerializeField] private PlayerValues PlayerVal;
     [SerializeField] private GameObject Canvas;
+    [SerializeField] public bool IsOccupied = false;
 
     private void Awake()
     {
@@ -49,5 +51,17 @@ public class PotScript : MonoBehaviour
             var c = Instantiate(MangoTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
         }
+    }
+    public void PlantPurpleLemon()
+    {
+        if (PlayerVal.LemonSeedCount > 0)
+        {
+            IsOccupied = true;
+            PlayerVal.PurpleLemonSeedCount--;
+            Canvas.SetActive(false);
+            var c = Instantiate(PurpleLemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            c.transform.SetParent(gameObject.transform);
+        }
+
     }
 }

@@ -272,6 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 998312005d4ae5c4e8c87b7cc7f34dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsIllegalPlantPlanted: 0
+  IllegalPlant: {fileID: 0}
 --- !u!4 &201776603
 Transform:
   m_ObjectHideFlags: 0
@@ -303,6 +305,8 @@ MonoBehaviour:
   LemonSeedCount: 99
   MangoCount: 0
   MangoSeedCount: 99
+  PurpleLemonCount: 0
+  PurpleLemonSeedCount: 99
 --- !u!1 &225402492
 GameObject:
   m_ObjectHideFlags: 0

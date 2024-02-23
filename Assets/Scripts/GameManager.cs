@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] public bool IsIllegalPlantPlanted;
+    [SerializeField] private GameObject IllegalPlant;
     void Start()
     {
         
@@ -13,6 +14,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        IllegalPlant = GameObject.FindGameObjectWithTag("IllegalPlant");
+
+        if (IllegalPlant == null)
+        {
+            IsIllegalPlantPlanted = false;
+        }
+        else if (IllegalPlant != null)
+        {
+            IsIllegalPlantPlanted = true;
+        }
     }
 }
