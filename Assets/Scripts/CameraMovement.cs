@@ -21,4 +21,9 @@ public class CameraMovement : MonoBehaviour
         Cam.transform.position = new Vector3(23.5f, 0, -10);
         RoomPlayerIsIn = 3;
     }
+    public void GoOutside()
+    {
+        Cam.transform.position = new Vector3(-23.5f, 0, -10);
+        RoomPlayerIsIn = 4;
+    }
 }
