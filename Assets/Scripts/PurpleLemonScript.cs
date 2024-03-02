@@ -17,6 +17,8 @@ public class PurpleLemonScript : MonoBehaviour
     [SerializeField] private CavansScript CavansScript;
     [SerializeField] public PlayerValues PlayerVal;
     [SerializeField] private PotScript ScriptPot;
+    [SerializeField] private bool isDry = false;
+    [SerializeField] private float LifeTimeRemaning = 3f;
 
     void Start()
     {
@@ -61,6 +63,22 @@ public class PurpleLemonScript : MonoBehaviour
             Destroy(WaterLevelSlider);
             HarvestButton.SetActive(true);
         }
+        if (WaterLevel <= 0)
+        {
+            isDry = true;
+        }
+        else
+        {
+            isDry = false;
+        }
+        if (isDry == true)
+        {
+            LifeTimeRemaning -= Time.deltaTime;
+        }
+        if (LifeTimeRemaning <= 0)
+        {
+            PlantDried();
+        }
     }
 
     public void WaterPlant()
@@ -71,6 +89,12 @@ public class PurpleLemonScript : MonoBehaviour
     {
         ScriptPot = GetComponentInParent<PotScript>();
         PlayerVal.HarvestPurpleLemons();
+        Destroy(gameObject);
+        ScriptPot.IsOccupied = false;
+    }
+    public void PlantDried()
+    {
+        ScriptPot = GetComponentInParent<PotScript>();
         Destroy(gameObject);
         ScriptPot.IsOccupied = false;
     }
