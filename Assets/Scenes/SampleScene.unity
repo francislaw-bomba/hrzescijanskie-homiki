@@ -482,10 +482,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LemonCount: 0
   LemonSeedCount: 99
+  LemonCountText: {fileID: 827670701}
+  LemonSeedCountText: {fileID: 1139207835}
   MangoCount: 0
   MangoSeedCount: 99
+  MangoCountText: {fileID: 59336147}
+  MangoSeedCountText: {fileID: 867708715}
+  DragonFruitCountText: {fileID: 984969509}
+  DragonFruitSeedCountText: {fileID: 1793805652}
+  PineappleCountText: {fileID: 1915727652}
+  PineappleSeedCountText: {fileID: 1639331589}
   PurpleLemonCount: 0
   PurpleLemonSeedCount: 99
+  PurpleLemonCountText: {fileID: 2019010920}
+  PurpleLemonSeedCountText: {fileID: 1169868315}
+  BlueTomatoCountText: {fileID: 476827729}
+  BlueTomatoSeedCountText: {fileID: 1202675697}
+  TurqPeachesCountText: {fileID: 1492529707}
+  TurqPeachesSeedCountText: {fileID: 270098655}
 --- !u!1 &225402492
 GameObject:
   m_ObjectHideFlags: 0
