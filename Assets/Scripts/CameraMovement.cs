@@ -26,4 +26,16 @@ public class CameraMovement : MonoBehaviour
         Cam.transform.position = new Vector3(-23.5f, 0, -10);
         RoomPlayerIsIn = 4;
     }
+    public void GoToShop()
+    {
+        Cam.transform.position = new Vector3(-23.5f, 12, -10);
+    }
+    public void GoToBlackMarket()
+    {
+        Cam.transform.position = new Vector3(-47f, 0, -10);
+    }
+    public void GoToBazar()
+    {
+        Cam.transform.position = new Vector3(-23.5f, -12, -10);
+    }
 }

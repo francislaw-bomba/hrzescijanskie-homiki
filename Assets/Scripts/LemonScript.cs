@@ -73,5 +73,6 @@ public class LemonScript : MonoBehaviour
         PlayerVal.HarvestLemons();
         Destroy(gameObject);
         ScriptPot.IsOccupied = false;
+
     }
 }
