@@ -181,8 +181,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 320a57834463e2442b522285734366e0, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b67e44ace3386654bb9a0076bb8c8f0e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 56238693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.5, y: 12, z: 0}
-  m_LocalScale: {x: 1.2163346, y: 1.147228, z: 1}
+  m_LocalScale: {x: 1.1420904, y: 0.5776931, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -488,16 +488,24 @@ MonoBehaviour:
   MangoSeedCount: 99
   MangoCountText: {fileID: 59336147}
   MangoSeedCountText: {fileID: 867708715}
+  DragonFruitCount: 0
+  DragonFruitSeedCount: 99
   DragonFruitCountText: {fileID: 984969509}
   DragonFruitSeedCountText: {fileID: 1793805652}
+  PineappleCount: 0
+  PineappleSeedCount: 99
   PineappleCountText: {fileID: 1915727652}
   PineappleSeedCountText: {fileID: 1639331589}
   PurpleLemonCount: 0
   PurpleLemonSeedCount: 99
   PurpleLemonCountText: {fileID: 2019010920}
   PurpleLemonSeedCountText: {fileID: 1169868315}
+  BlueTomatoCount: 0
+  BlueTomatoSeedCount: 99
   BlueTomatoCountText: {fileID: 476827729}
   BlueTomatoSeedCountText: {fileID: 1202675697}
+  TurqPeachesCount: 0
+  TurqPeachesSeedCount: 99
   TurqPeachesCountText: {fileID: 1492529707}
   TurqPeachesSeedCountText: {fileID: 270098655}
 --- !u!1 &225402492
@@ -894,8 +902,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -581, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -559.9674, y: -50}
+  m_SizeDelta: {x: 57.9348, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312750316
 MonoBehaviour:
@@ -917,7 +925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cfcb3befe78436048aeaea38d7f867bd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1367,7 +1375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -482, y: -200}
+  m_AnchoredPosition: {x: -585, y: -200}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
@@ -2093,7 +2101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -302, y: -205}
+  m_AnchoredPosition: {x: -385, y: -205}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &867708713
@@ -2642,8 +2650,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 199.00002, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 218.51839, y: -50}
+  m_SizeDelta: {x: 60.9633, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989652877
 MonoBehaviour:
@@ -2665,7 +2673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 55e93843c70a1b84caa5a40d4f0ed9fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4848,8 +4856,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -841, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -817.7299, y: -50}
+  m_SizeDelta: {x: 53.4598, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042236095
 MonoBehaviour:
@@ -4871,7 +4879,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f0fe3dbf4dc49694faa634f21bbcfe58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5113,6 +5121,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 842317845, guid: 2a712fe339e5c49408826e5d3a3824a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c94aed359e30ac84f8faaeb2f4ddf41b, type: 3}
+    - target: {fileID: 8618967685058930551, guid: 2a712fe339e5c49408826e5d3a3824a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 01766028e21c96742a32731f15250eda, type: 3}
+    - target: {fileID: 8697861496380848024, guid: 2a712fe339e5c49408826e5d3a3824a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b48e78e0d62514498a108b6dcc24a2c, type: 3}
     - target: {fileID: 8697861496844576149, guid: 2a712fe339e5c49408826e5d3a3824a6, type: 3}
       propertyPath: m_Name
       value: Pot
