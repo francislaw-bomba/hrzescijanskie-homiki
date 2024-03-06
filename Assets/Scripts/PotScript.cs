@@ -32,10 +32,10 @@ public class PotScript : MonoBehaviour
     [ContextMenu("PlantLemon")]
     public void PlantLemon()
     {
-        if (PlayerVal.LemonSeedCount > 0)
+        if (PlayerVal.Lemon.SeedCount > 0)
         {
             IsOccupied = true;
-            PlayerVal.LemonSeedCount--;
+            PlayerVal.Lemon.SeedCount--;
             Canvas.SetActive(false);
             var c = Instantiate(LemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
@@ -43,10 +43,10 @@ public class PotScript : MonoBehaviour
     }
     public void PlantMango()
     {
-        if (PlayerVal.MangoSeedCount > 0)
+        if (PlayerVal.Mango.SeedCount > 0)
         {
             IsOccupied = true;
-            PlayerVal.MangoSeedCount--;
+            PlayerVal.Mango.SeedCount--;
             Canvas.SetActive(false);
             var c = Instantiate(MangoTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
@@ -54,10 +54,10 @@ public class PotScript : MonoBehaviour
     }
     public void PlantPurpleLemon()
     {
-        if (PlayerVal.LemonSeedCount > 0)
+        if (PlayerVal.PurpleLemon.SeedCount > 0)
         {
             IsOccupied = true;
-            PlayerVal.PurpleLemonSeedCount--;
+            PlayerVal.PurpleLemon.SeedCount--;
             Canvas.SetActive(false);
             var c = Instantiate(PurpleLemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);

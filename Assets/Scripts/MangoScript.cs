@@ -89,7 +89,7 @@ public class MangoScript : MonoBehaviour
     public void Harvested()
     {
         ScriptPot = GetComponentInParent<PotScript>();
-        PlayerVal.HarvestMangos();
+        PlayerVal.AddMangos(5);
         Destroy(gameObject);
         ScriptPot.IsOccupied = false;
     }

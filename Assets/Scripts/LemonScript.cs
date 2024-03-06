@@ -88,7 +88,7 @@ public class LemonScript : MonoBehaviour
     public void Harvested()
     {
         ScriptPot = GetComponentInParent<PotScript>();
-        PlayerVal.HarvestLemons();
+        PlayerVal.AddLemons(5);
         Destroy(gameObject);
         ScriptPot.IsOccupied = false;
 

@@ -3,82 +3,76 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerValues : MonoBehaviour
+public class Fruit
 {
-    [SerializeField] public int LemonCount;
-    [SerializeField] public int LemonSeedCount = 99;
+    public int FruitCount;
+    public int SeedCount;
+}
+public class PlayerValues : MonoBehaviour
+{ 
+
     [SerializeField] public Text LemonCountText;
     [SerializeField] public Text LemonSeedCountText;
-
-    [SerializeField] public int MangoCount;
-    [SerializeField] public int MangoSeedCount = 99;
     [SerializeField] public Text MangoCountText;
-    [SerializeField] public Text MangoSeedCountText;
-
-    [SerializeField] public int DragonFruitCount;
-    [SerializeField] public int DragonFruitSeedCount = 99;
+    [SerializeField] public Text MangoSeedCountText;   
     [SerializeField] public Text DragonFruitCountText;
-    [SerializeField] public Text DragonFruitSeedCountText;
-
-    [SerializeField] public int PineappleCount;
-    [SerializeField] public int PineappleSeedCount = 99;
+    [SerializeField] public Text DragonFruitSeedCountText;  
     [SerializeField] public Text PineappleCountText;
-    [SerializeField] public Text PineappleSeedCountText;
-
-    [SerializeField] public int PurpleLemonCount;
-    [SerializeField] public int PurpleLemonSeedCount = 99;
+    [SerializeField] public Text PineappleSeedCountText; 
     [SerializeField] public Text PurpleLemonCountText;
     [SerializeField] public Text PurpleLemonSeedCountText;
-
-    [SerializeField] public int BlueTomatoCount;
-    [SerializeField] public int BlueTomatoSeedCount = 99;
     [SerializeField] public Text BlueTomatoCountText;
-    [SerializeField] public Text BlueTomatoSeedCountText;
-
-    [SerializeField] public int TurqPeachesCount;
-    [SerializeField] public int TurqPeachesSeedCount = 99;
+    [SerializeField] public Text BlueTomatoSeedCountText; 
     [SerializeField] public Text TurqPeachesCountText;
     [SerializeField] public Text TurqPeachesSeedCountText;
+
+    public Fruit Lemon = new Fruit();
+    public Fruit Mango = new Fruit();
+    public Fruit DragonFruit = new Fruit();
+    public Fruit Pineapple = new Fruit();
+    public Fruit PurpleLemon = new Fruit();
+    public Fruit BlueTomato = new Fruit();
+    public Fruit TurqPeaches = new Fruit();
     void Start()
     {
-        
+        Lemon.SeedCount = 99;
     }
 
     // Update is called once per frame
     void Update()
     { 
-        LemonCountText.text = LemonCount.ToString();
-        LemonSeedCountText.text = LemonSeedCount.ToString();
+        LemonCountText.text = Lemon.FruitCount.ToString();
+        LemonSeedCountText.text = Lemon.SeedCount.ToString();
 
-        MangoCountText.text = MangoCount.ToString();
-        MangoSeedCountText.text = MangoSeedCount.ToString();
+        MangoCountText.text = Mango.FruitCount.ToString();
+        MangoSeedCountText.text = Mango.SeedCount.ToString();
 
-        DragonFruitCountText.text = DragonFruitCount.ToString();
-        DragonFruitSeedCountText.text = DragonFruitSeedCount.ToString();
+        DragonFruitCountText.text = DragonFruit.FruitCount.ToString();
+        DragonFruitSeedCountText.text = DragonFruit.SeedCount.ToString();
 
-        PineappleCountText.text = PineappleCount.ToString();
-        PineappleSeedCountText.text = PineappleSeedCount.ToString();
+        PineappleCountText.text = Pineapple.FruitCount.ToString();
+        PineappleSeedCountText.text = Pineapple.SeedCount.ToString();
 
-        PurpleLemonCountText.text = PurpleLemonCount.ToString();
-        PurpleLemonSeedCountText.text = PurpleLemonSeedCount.ToString();
+        PurpleLemonCountText.text = PurpleLemon.FruitCount.ToString();
+        PurpleLemonSeedCountText.text = PurpleLemon.SeedCount.ToString();
 
-        BlueTomatoCountText.text = BlueTomatoCount.ToString();
-        BlueTomatoSeedCountText.text = BlueTomatoSeedCount.ToString();
+        BlueTomatoCountText.text = BlueTomato.FruitCount.ToString();
+        BlueTomatoSeedCountText.text = BlueTomato.SeedCount.ToString();
 
-        TurqPeachesCountText.text = TurqPeachesCount.ToString();
-        TurqPeachesSeedCountText.text = TurqPeachesSeedCount.ToString();
+        TurqPeachesCountText.text = TurqPeaches.FruitCount.ToString();
+        TurqPeachesSeedCountText.text = TurqPeaches.SeedCount.ToString();
     }
 
-    public void HarvestLemons()
+    public void AddLemons(int x)
     {
-        LemonCount += 5;
+        Lemon.FruitCount = Lemon.FruitCount + x;
     }
-    public void HarvestMangos()
+    public void AddMangos(int x)
     {
-        MangoCount += 5;
+        Mango.FruitCount += x;
     }
-    public void HarvestPurpleLemons()
+    public void AddPurpleLemons(int x)
     {
-        PurpleLemonCount += 3;
+        PurpleLemon.FruitCount += x;
     }   
 }

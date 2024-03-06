@@ -88,7 +88,7 @@ public class PurpleLemonScript : MonoBehaviour
     public void Harvested()
     {
         ScriptPot = GetComponentInParent<PotScript>();
-        PlayerVal.HarvestPurpleLemons();
+        PlayerVal.AddPurpleLemons(5);
         Destroy(gameObject);
         ScriptPot.IsOccupied = false;
     }
