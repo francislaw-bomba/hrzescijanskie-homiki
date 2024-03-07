@@ -9,7 +9,8 @@ public class Fruit
     public int SeedCount;
 }
 public class PlayerValues : MonoBehaviour
-{ 
+{
+    [SerializeField] public int Money;
 
     [SerializeField] public Text LemonCountText;
     [SerializeField] public Text LemonSeedCountText;
