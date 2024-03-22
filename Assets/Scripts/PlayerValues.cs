@@ -33,7 +33,7 @@ public class PlayerValues : MonoBehaviour
     public Fruit Pineapple = new Fruit();
     public Fruit PurpleLemon = new Fruit();
     public Fruit BlueTomato = new Fruit();
-    public Fruit TurqPeaches = new Fruit();
+    public Fruit TurqPeache = new Fruit();
     void Start()
     {
         Lemon.SeedCount = 99;
@@ -60,20 +60,36 @@ public class PlayerValues : MonoBehaviour
         BlueTomatoCountText.text = BlueTomato.FruitCount.ToString();
         BlueTomatoSeedCountText.text = BlueTomato.SeedCount.ToString();
 
-        TurqPeachesCountText.text = TurqPeaches.FruitCount.ToString();
-        TurqPeachesSeedCountText.text = TurqPeaches.SeedCount.ToString();
+        TurqPeachesCountText.text = TurqPeache.FruitCount.ToString();
+        TurqPeachesSeedCountText.text = TurqPeache.SeedCount.ToString();
     }
 
     public void AddLemons(int x)
     {
-        Lemon.FruitCount = Lemon.FruitCount + x;
+        Lemon.FruitCount += x;
     }
     public void AddMangos(int x)
     {
         Mango.FruitCount += x;
     }
+    public void AddDragonFruits(int x)
+    {
+        DragonFruit.FruitCount += x;
+    }
+    public void AddPineapples(int x)
+    {
+        Pineapple.FruitCount += x;
+    }
     public void AddPurpleLemons(int x)
     {
         PurpleLemon.FruitCount += x;
-    }   
+    }
+    public void AddBlueTomatoes(int x)
+    {
+        BlueTomato.FruitCount += x;
+    }
+    public void AddTurqPeaches(int x)
+    {
+        TurqPeache.FruitCount += x;
+    }
 }
