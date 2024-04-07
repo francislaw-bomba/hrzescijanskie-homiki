@@ -12,12 +12,12 @@ public class ShopVoids : MonoBehaviour
 
     public void BuyLemonSeeds()
     {
-        PlayerVal.Money -= 100;
+        PlayerVal.Money -= 300;
         PlayerVal.Lemon.SeedCount += 1;
     }
     public void BuyMangoSeeds()
     {
-        PlayerVal.Money -= 100;
+        PlayerVal.Money -= 500;
         PlayerVal.Mango.SeedCount += 1;
     }
     public void BuyDragonFruitSeeds()

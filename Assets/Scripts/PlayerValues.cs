@@ -11,6 +11,7 @@ public class Fruit
 public class PlayerValues : MonoBehaviour
 {
     [SerializeField] public int Money;
+    [SerializeField] public Text MoneyText;
 
     [SerializeField] public Text LemonCountText;
     [SerializeField] public Text LemonSeedCountText;
@@ -36,7 +37,7 @@ public class PlayerValues : MonoBehaviour
     public Fruit TurqPeach = new Fruit();
     void Start()
     {
-        Lemon.SeedCount = 99;
+        Money = 10000;
     }
 
     // Update is called once per frame
@@ -62,6 +63,8 @@ public class PlayerValues : MonoBehaviour
 
         TurqPeachesCountText.text = TurqPeach.FruitCount.ToString();
         TurqPeachesSeedCountText.text = TurqPeach.SeedCount.ToString();
+
+        MoneyText.text = Money.ToString();
     }
 
     public void EditMoney(int x)
