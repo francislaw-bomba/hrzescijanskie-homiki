@@ -37,7 +37,7 @@ public class PlayerValues : MonoBehaviour
     public Fruit TurqPeach = new Fruit();
     void Start()
     {
-        Money = 10000;
+        Money = 400;
     }
 
     // Update is called once per frame
