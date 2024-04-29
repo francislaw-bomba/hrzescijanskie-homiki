@@ -7,6 +7,7 @@ public class PotScript : MonoBehaviour
     [SerializeField] private GameObject LemonTreePrefab;
     [SerializeField] private GameObject MangoTreePrefab;
     [SerializeField] private GameObject PurpleLemonTreePrefab;
+    [SerializeField] private GameObject PineappleTreePrefab;
 
     [SerializeField] private PlayerValues PlayerVal;
     [SerializeField] private GameObject Canvas;
@@ -63,5 +64,16 @@ public class PotScript : MonoBehaviour
             c.transform.SetParent(gameObject.transform);
         }
 
+    }
+    public void PlantPineapple()
+    {
+        if (PlayerVal.Pineapple.SeedCount > 0)
+        {
+            IsOccupied = true;
+            PlayerVal.Pineapple.SeedCount--;
+            Canvas.SetActive(false);
+            var c = Instantiate(PineappleTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            c.transform.SetParent(gameObject.transform);
+        }
     }
 }
