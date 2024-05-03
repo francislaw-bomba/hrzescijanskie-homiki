@@ -13,4 +13,9 @@ public class SceneManag : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
 }

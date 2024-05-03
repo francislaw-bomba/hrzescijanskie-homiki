@@ -38,7 +38,6 @@ public class PlayerValues : MonoBehaviour
     void Start()
     {
         Money = 400;
-        Pineapple.SeedCount = 1;
     }
 
     // Update is called once per frame

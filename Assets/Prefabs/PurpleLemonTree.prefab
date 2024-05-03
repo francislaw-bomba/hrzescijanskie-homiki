@@ -312,12 +312,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e4c6d5e318ef3554dabb57a3715b6e1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aacdcfd0e5a547e4db21f6a7906d5089, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -335,10 +335,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f0ac0a88d7508419287f3fe5b6a47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stage2: {fileID: 21300000, guid: 3464d115b4398944b85e42691d6cdd6a, type: 3}
-  Stage3: {fileID: 21300000, guid: 968d984c485278b44aefb4ff23615aff, type: 3}
-  Stage4: {fileID: 21300000, guid: 77eed2d265a29bf4f81397b6cf56313a, type: 3}
-  Stage5: {fileID: 21300000, guid: b508898eb84b91b41a04e50502fbca2c, type: 3}
+  Stage2: {fileID: 21300000, guid: 5a1c39eb51dc07f4eb84d71d628f5548, type: 3}
+  Stage3: {fileID: 21300000, guid: 0a841c4439f78ad488502532de437095, type: 3}
+  Stage4: {fileID: 21300000, guid: 8d0708cd98b075b45a1d3d3cf4ae10ab, type: 3}
+  Stage5: {fileID: 21300000, guid: f60d9416b5ec1db479edc7edc423a6df, type: 3}
   GrowthTime: 60
   WaterLevel: 10
   MaxWaterLevel: 10

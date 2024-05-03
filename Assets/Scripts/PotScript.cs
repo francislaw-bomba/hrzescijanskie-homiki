@@ -38,7 +38,7 @@ public class PotScript : MonoBehaviour
             IsOccupied = true;
             PlayerVal.Lemon.SeedCount--;
             Canvas.SetActive(false);
-            var c = Instantiate(LemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            var c = Instantiate(LemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 4.12f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
         }
     }
@@ -49,7 +49,7 @@ public class PotScript : MonoBehaviour
             IsOccupied = true;
             PlayerVal.Mango.SeedCount--;
             Canvas.SetActive(false);
-            var c = Instantiate(MangoTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            var c = Instantiate(MangoTreePrefab, new Vector3(transform.position.x, transform.position.y + 4.12f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
         }
     }
@@ -60,7 +60,7 @@ public class PotScript : MonoBehaviour
             IsOccupied = true;
             PlayerVal.PurpleLemon.SeedCount--;
             Canvas.SetActive(false);
-            var c = Instantiate(PurpleLemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            var c = Instantiate(PurpleLemonTreePrefab, new Vector3(transform.position.x, transform.position.y + 4.12f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
         }
 
@@ -72,7 +72,7 @@ public class PotScript : MonoBehaviour
             IsOccupied = true;
             PlayerVal.Pineapple.SeedCount--;
             Canvas.SetActive(false);
-            var c = Instantiate(PineappleTreePrefab, new Vector3(transform.position.x, transform.position.y + 3.462f, transform.position.z), Quaternion.identity);
+            var c = Instantiate(PineappleTreePrefab, new Vector3(transform.position.x, transform.position.y + 4.12f, transform.position.z), Quaternion.identity);
             c.transform.SetParent(gameObject.transform);
         }
     }
