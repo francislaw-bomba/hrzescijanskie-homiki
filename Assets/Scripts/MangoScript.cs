@@ -43,7 +43,6 @@ public class MangoScript : MonoBehaviour
         {
             WaterButton.SetActive(true);
         }
-
         if (TimeRemaning < 22.5f && TimeRemaning > 15)
         {
             Sprite.sprite = Stage2;
