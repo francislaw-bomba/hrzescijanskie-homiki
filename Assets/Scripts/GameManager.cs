@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(Pot, new Vector3(0, -2.8f, -1), Quaternion.identity);
             Destroy(Button1);
+            PlayerVal.Money -= 2000;
         }
     }
     public void BuyPot2()
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(Pot, new Vector3(7.5f, -2.8f, -1), Quaternion.identity);
             Destroy(Button2);
+            PlayerVal.Money -= 3000;
         }
     }
 }
