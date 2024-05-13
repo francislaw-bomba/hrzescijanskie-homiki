@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CousinScript : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class CousinScript : MonoBehaviour
     [SerializeField] private float CousinTimer;
     [SerializeField] public bool IsIllegalPlantPlanted;
     [SerializeField] private GameObject IllegalPlant;
+    [SerializeField] private Sprite CousinScreen, CousinCallScreen, CousinPayScreen;
+    [SerializeField] private GameObject HiButton, Cousin, PayButton, ByeButton;
+    [SerializeField] private Image CousinImage;
 
     void Start()
     {
@@ -45,9 +49,10 @@ public class CousinScript : MonoBehaviour
             else
             {
                 Time.timeScale = 0f;
-                //respi sie kuzyn guziki sa itp                
+                Cousin.SetActive(true);         
             }
         }
+
         if(Debt <= 0)
         {
             SceneManager.LoadSceneAsync(2);
@@ -55,13 +60,20 @@ public class CousinScript : MonoBehaviour
     }
     public void PayDebt()
     {
-        PlayerVal.Money -= 1000;
-        Debt -= 1000;
+        if(PlayerVal.Money >= 1000)
+        {
+            PlayerVal.Money -= 1000;
+            Debt -= 1000;
+            CousinImage.sprite = CousinPayScreen;
+        }
     }
     public void IdzSeKuzyn()
-    {
-        //despawnuje kuzyna
+    {   
         Time.timeScale = 1f;
+        Cousin.SetActive(false);
+        HiButton.SetActive(true);
+        PayButton.SetActive(false);
+        ByeButton.SetActive(false);
         CousinTimer = Random.Range(150, 300);
     }
 }
