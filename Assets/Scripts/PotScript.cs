@@ -8,6 +8,9 @@ public class PotScript : MonoBehaviour
     [SerializeField] private GameObject MangoTreePrefab;
     [SerializeField] private GameObject PurpleLemonTreePrefab;
     [SerializeField] private GameObject PineappleTreePrefab;
+    [SerializeField] private GameObject DragonFruitTreePrefab;
+    [SerializeField] private GameObject BlueTomatoTreePrefab;
+    [SerializeField] private GameObject TurqPeachesTreePrefab;
 
     [SerializeField] private PlayerValues PlayerVal;
     [SerializeField] private GameObject Canvas;

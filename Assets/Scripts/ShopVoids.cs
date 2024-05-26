@@ -28,17 +28,17 @@ public class ShopVoids : MonoBehaviour
     }
     public void BuyDragonFruitSeeds()
     {
-        if (PlayerVal.Money >= 100)
+        if (PlayerVal.Money >= 700)
         {
-            PlayerVal.Money -= 100;
+            PlayerVal.Money -= 700;
             PlayerVal.DragonFruit.SeedCount += 1;
         }
     }
     public void BuyPineappleSeeds()
     {
-        if (PlayerVal.Money >= 100)
+        if (PlayerVal.Money >= 900)
         {
-            PlayerVal.Money -= 100;
+            PlayerVal.Money -= 900;
             PlayerVal.Pineapple.SeedCount += 1;
         }
     }
